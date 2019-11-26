@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="css.css" rel="stylesheet">
+    <title>Button</title>
+</head>
+<body>
+    <form>
+    <table>
+        <tr>
+            <td>Произвести оплату:</td>
+            <td>
+                <input type="number" id="number"  placeholder="Введите сумму" min="1" max="1000000"></input>
+                <label for="number">Введите сумму</label>
+            </td>
+            <td>
+                <input type="submit" id="btn" value="Отправить"></input>
+            </td>
+        </tr>
+       <!--
+        <tr>
+            <td>Произвести оплату:</td>
+            <td>
+                    <div class="form">      
+                            <input type="number" required>
+                            <span class="bar"></span>
+                            <label>Введите сумму</label>
+                    </div>
+            </td>
+        </tr>
+        -->
+    </table>
+    </form>
+    
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="//api.bitrix24.com/api/v1/"></script> 
+    
+    <script src="js/button2.js"></script> 
+</body>
+</html>

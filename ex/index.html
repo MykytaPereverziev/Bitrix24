@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>First app</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+    </head>
+    <body>
+        <div id="app" class="container-fluid">
+            <div class="alert alert-success" role="alert" id="user-name">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-6">
+                <div class="panel panel-default">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Название</th>
+                            <th>Сумма</th>
+                        </tr>
+                    </thead>
+                        <tbody id="deal-list">
+                            <tr>
+                                <td colspan="3">
+                                    <i class="fa fa-spinner fa-spin"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="//api.bitrix24.com/api/v1/"></script>
+        <script src="js/main.js"></script>
+        <script 
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+            BX24.init(function(){
+                app.displayCurrentUser('#user-name');
+                app.displayUserClosedDeals(1);
+            });
+        });
+
+    </script>
+    </body>
+</html>

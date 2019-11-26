@@ -1,0 +1,26 @@
+//Логика
+BX24.callMethod(
+    "crm.deal.list",
+    {
+        order: { "STAGE_ID": "ASC"},
+        filter: {"ASSIGNED_BY_ID": 3},
+        select: ["ID", "TITLE", "STAGE_ID", "OPPORTUNITY"]
+    },
+    function(result)
+    {
+        //получение порции данных
+        if(result.error())
+        //обработка ошибки
+        console.error(result.error());
+        else{
+            //вывод порции данных
+            console.log(result.data());
+            // ещё есть?
+        if(result.more())
+        result.next();
+        else{
+            //нужно что-то сделать
+        }
+        }
+    }
+);
